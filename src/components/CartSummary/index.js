@@ -12,7 +12,7 @@ const CartSummary = () => (
         let totalPrice = 0
         cartList.forEach(eachItem => {
           if (eachItem.price > 0) {
-            totalPrice += parseInt(eachItem.price)
+            totalPrice += parseInt(eachItem.price * eachItem.quantity)
             console.log(totalPrice)
           }
         })
@@ -24,10 +24,10 @@ const CartSummary = () => (
 
       return (
         <div className="cart-summary">
-          <p className="order-total-text">
+          <h1 className="order-total-text">
             Order Total:
             <span className="total-price"> RS {totalOrderPrice}</span>
-          </p>
+          </h1>
           <p className="items-count">{cartList.length} Items in cart</p>
           <button type="button" className="checkout-button">
             Checkout

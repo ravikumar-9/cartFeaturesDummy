@@ -48,3 +48,11 @@
   width: 100%;
   justify-content: flex-end;
 }
+.remove-all-button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  color: blue;
+  align-self: flex-end;
+}
